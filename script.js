@@ -11,8 +11,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact form handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    // Add form submission logic here
-    alert('Thank you for your message! I will get back to you soon.');
+    const formData = new FormData(this);
+    const mailtoLink = `mailto:sumanthdev03@gmail.com?subject=${encodeURIComponent(formData.get('subject'))}&body=${encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`)}`;
+    window.location.href = mailtoLink;
+    alert('Thank you for your message! Your default email client will open to send the email.');
     this.reset();
 });
 
@@ -24,6 +26,14 @@ window.addEventListener('scroll', () => {
     } else {
         backToTop.style.display = 'none';
     }
+});
+
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 // Add scroll animations
