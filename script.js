@@ -79,22 +79,23 @@ skillCategories.forEach(category => {
     skillCategoryObserver.observe(category);
 });
 
-// Animate skill bars when they come into view
-const skillBars = document.querySelectorAll('.skill-bar-fill');
-const skillObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+// Animate skill tags when they come into view
+const skillTags = document.querySelectorAll('.skill-tag');
+const skillTagObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            const width = entry.target.style.width;
-            entry.target.style.width = '0';
             setTimeout(() => {
-                entry.target.style.width = width;
-            }, 100);
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 50);
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-skillBars.forEach(bar => {
-    bar.style.width = '0';
-    skillObserver.observe(bar);
+skillTags.forEach(tag => {
+    tag.style.opacity = '0';
+    tag.style.transform = 'translateY(20px) scale(0.8)';
+    tag.style.transition = 'all 0.3s ease';
+    skillTagObserver.observe(tag);
 });
