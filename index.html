@@ -55,29 +55,54 @@
     <section id="about" class="section">
       <h2>About Me</h2>
       <div class="about-content">
-        <div class="profile-image">
-          <img src="images/neil.jpg" alt="Sumanth Devarapalli" />
+        <div class="profile-section">
+          <div class="profile-image">
+            <img src="images/neil.jpg" alt="Sumanth Devarapalli" />
+            <div class="profile-overlay">
+              <div class="profile-badge">
+                <i class="fas fa-code"></i>
+                <span>Developer</span>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <div class="about-text">
-          <p>
-            I am a dedicated software developer and data scientist with a
-            Master's in Data Science and Analytics from the University of Leeds.
-            With a solid background in full-stack development, database
-            management, and data analysis, I create innovative solutions that
-            improve efficiency and user experience. Over the years, I’ve worked
-            on significant projects in healthcare, recruitment, and technology.
-            From developing centralized communication systems for care homes to
-            building scalable referral-based recruitment platforms, I have
-            experience across the entire software development lifecycle. My work
-            combines technical excellence with user-centered design. I am
-            proficient with modern tools and technologies, including Node.js,
-            Python, SQL, and AWS, and I am always eager to learn and take on new
-            challenges. I am passionate about solving real-world problems and
-            leading initiatives that blend technology and creativity to drive
-            positive change.
-          </p>
-          <p>---------------------------</p>
-          <p>When I'm not coding, I'm Cooking.</p>
+          <div class="about-intro">
+            <h3>Hello, I'm Neil Sumanth</h3>
+            <p class="intro-text">
+                A dedicated software developer and data scientist with a Master's in Data Science and Analytics from the University of Leeds.
+              </p>
+              </div>
+              
+              <div class="about-description">
+                <p>
+                  With a strong foundation in full-stack development, database management, and data analysis, I design and deliver solutions that improve efficiency, data accessibility, and user experience. My professional journey spans projects in healthcare, recruitment, and technology, where I have contributed across the entire software development lifecycle.
+                </p>
+                <p>
+                  From creating secure data-driven applications and building scalable referral-based recruitment platforms to designing interactive dashboards and automating workflows, I bring a balance of technical expertise and user-centered design. My work often involves integrating APIs, structuring complex datasets, and ensuring data quality and governance while collaborating closely with cross-functional teams.
+                </p>
+                <p>
+                  I am proficient in modern tools and technologies such as C#, .NET, SQL, Node.js, Python, ReactJS, AWS, Qlik Sense, and Power BI. In addition, I have strong skills in technical documentation, Agile methodology, and stakeholder communication, ensuring projects are both technically robust and aligned with user needs.
+                </p>
+                <p>
+                  I am passionate about solving real-world problems, continuously learning, and driving initiatives that blend technology, collaboration, and creativity to deliver meaningful impact.
+                </p>
+              </div>
+              
+          
+          <div class="quote-section">
+            <div class="quote-container">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <blockquote class="cooking-quote">
+                When I'm not coding, I'm Cooking.
+              </blockquote>
+              <div class="quote-decoration"></div>
+            </div>
+          </div>
+          
           <div class="social-links">
             <a href="mailto:sumanthdev03@gmail.com" class="social-link"
               ><i class="fas fa-envelope"></i> Email</a
@@ -297,84 +322,182 @@
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
+      <h2>Featured Projects</h2>
+      <div class="projects-container">
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <div class="project-status">
+              <span class="status-badge completed">Completed</span>
+            </div>
+          </div>
           <h3>CareConnect - Centralized Care Home Communication System</h3>
-          <p>
-            Developed a centralized communication platform for care homes using
-            Node.js, Express.js, and MySQL. Improved operational efficiency,
-            ensured GDPR compliance, and tailored features for streamlined
-            workflows and staff usability.
+          <p class="project-description">
+            Developed a centralized communication platform for care homes using Node.js, Express.js, and MySQL. Improved operational efficiency, ensured GDPR compliance, and tailored features for streamlined workflows and staff usability.
           </p>
-          <a
-            href="https://github.com/sumanth-devarapalli/careconnect"
-            class="btn secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View Project</a
-          >
+          <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">GDPR</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanth-devarapalli/careconnect" class="btn secondary" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
         </div>
+
         <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <div class="project-status">
+              <span class="status-badge completed">Completed</span>
+            </div>
+          </div>
           <h3>Optimized Path Planning</h3>
-          <p>
-            Developed Python-based path optimization algorithms for DSTL,
-            reducing detection risks by 25%. Applied advanced simulations to
-            improve strategic operations and safety in defense applications.
+          <p class="project-description">
+            Developed Python-based path optimization algorithms for DSTL, reducing detection risks by 25%. Applied advanced simulations to improve strategic operations and safety in defense applications.
           </p>
-          <a
-            href="https://github.com/sumanth-devarapalli/path-planning"
-            class="btn secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View Project</a
-          >
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">Simulation</span>
+            <span class="tech-tag">DSTL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanth-devarapalli/path-planning" class="btn secondary" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
+
         <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="project-status">
+              <span class="status-badge completed">Completed</span>
+            </div>
+          </div>
           <h3>Tile Crack Detection</h3>
-          <p>
-            Built an automated tile defect detection system with deep learning,
-            achieving 95% accuracy. Integrated Raspberry Pi and LabVIEW,
-            improving manufacturing efficiency by 30% with enhanced quality
-            assurance.
+          <p class="project-description">
+            Built an automated tile defect detection system with deep learning, achieving 95% accuracy. Integrated Raspberry Pi and LabVIEW, improving manufacturing efficiency by 30% with enhanced quality assurance.
           </p>
-          <a
-            href="https://github.com/sumanth-devarapalli/crack-detection"
-            class="btn secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View Project</a
-          >
+          <div class="project-tech">
+            <span class="tech-tag">Deep Learning</span>
+            <span class="tech-tag">Raspberry Pi</span>
+            <span class="tech-tag">LabVIEW</span>
+            <span class="tech-tag">Computer Vision</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanth-devarapalli/crack-detection" class="btn secondary" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
+
         <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="project-status">
+              <span class="status-badge completed">Completed</span>
+            </div>
+          </div>
           <h3>Nokia 5G Logistics Optimization</h3>
-          <p>
-            Designed IIoT-based logistics solutions for 5G modules, reducing
-            delivery times by 30%. Implemented digital tracking, predictive
-            modeling, and advanced analytics to enhance workflows and
-            operational efficiency.
+          <p class="project-description">
+            Designed IIoT-based logistics solutions for 5G modules, reducing delivery times by 30%. Implemented digital tracking, predictive modeling, and advanced analytics to enhance workflows and operational efficiency.
           </p>
-          <a
-            href="https://github.com/sumanth-devarapalli/healthcare-analytics"
-            class="btn secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View Project</a
-          >
+          <div class="project-tech">
+            <span class="tech-tag">IIoT</span>
+            <span class="tech-tag">5G</span>
+            <span class="tech-tag">Analytics</span>
+            <span class="tech-tag">Predictive Modeling</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sumanth-devarapalli/healthcare-analytics" class="btn secondary" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Subject" required />
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit" class="btn primary">Send Message</button>
-      </form>
+      <h2>Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-intro">
+            <h3>Let's Work Together</h3>
+            <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+          </div>
+          
+          <div class="contact-methods">
+            <a href="mailto:sumanthdev03@gmail.com" class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>sumanthdev03@gmail.com</p>
+              </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/neil-sumanth-1306/" class="contact-method" target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>Connect with me professionally</p>
+              </div>
+            </a>
+            
+            <a href="https://github.com/D-sumanth" class="contact-method" target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <p>Check out my code repositories</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+              <label>Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+              <label>Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" required />
+              <label>Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" required></textarea>
+              <label>Message</label>
+            </div>
+            <button type="submit" class="btn primary">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
