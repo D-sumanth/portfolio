@@ -36,7 +36,7 @@ backToTop.addEventListener('click', (e) => {
     });
 });
 
-// Add scroll animations
+// Add scroll animations with optimized performance
 const sections = document.querySelectorAll('.section');
 const observerOptions = {
     root: null,
@@ -44,11 +44,19 @@ const observerOptions = {
     rootMargin: "0px"
 };
 
+// Use requestAnimationFrame for smoother animations
+const animateSection = (element) => {
+    requestAnimationFrame(() => {
+        element.style.opacity = 1;
+        element.style.transform = 'translateY(0)';
+    });
+};
+
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
+            animateSection(entry.target);
+            observer.unobserve(entry.target); // Stop observing after animation
         }
     });
 }, observerOptions);
@@ -57,7 +65,8 @@ sections.forEach(section => {
     if (!section.classList.contains('skills')) {
         section.style.opacity = 0;
         section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.5s ease-in-out';
+        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        section.style.willChange = 'opacity, transform';
         observer.observe(section);
     }
 });
@@ -79,15 +88,17 @@ skillCategories.forEach(category => {
     skillCategoryObserver.observe(category);
 });
 
-// Animate skill tags when they come into view
+// Animate skill tags when they come into view with optimized performance
 const skillTags = document.querySelectorAll('.skill-tag');
 const skillTagObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0) scale(1)';
-            }, index * 50);
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }, index * 30); // Reduced delay for smoother animation
+            });
             observer.unobserve(entry.target);
         }
     });
@@ -96,6 +107,7 @@ const skillTagObserver = new IntersectionObserver((entries, observer) => {
 skillTags.forEach(tag => {
     tag.style.opacity = '0';
     tag.style.transform = 'translateY(20px) scale(0.8)';
-    tag.style.transition = 'all 0.3s ease';
+    tag.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+    tag.style.willChange = 'opacity, transform';
     skillTagObserver.observe(tag);
 });

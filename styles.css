@@ -21,6 +21,16 @@
   box-sizing: border-box;
 }
 
+/* Optimize animations for smoothness */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
 body {
   font-family: "Merriweather", serif;
   line-height: 1.6;
@@ -270,13 +280,14 @@ h6 {
   padding: 1rem 2rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Poppins", sans-serif;
   margin: 0.5rem;
+  will-change: transform, box-shadow;
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, #0a0a1a, #1a1440);
+  background: var(--gradient-secondary);
   color: var(--text-color);
   border: none;
   box-shadow: 0 4px 15px var(--glow-color);
@@ -340,84 +351,178 @@ h6 {
   font-size: 2.5rem;
 }
 
-/* Timeline */
-.timeline {
-  max-width: 800px;
+/* Experience Container */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
   margin: 0 auto;
-  position: relative;
-  padding-left: 2rem;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 3px;
-  background: var(--accent-color);
-}
-
-.timeline-item {
-  margin-bottom: 3rem;
-  padding: 2rem;
+.experience-card {
   background: rgba(30, 30, 60, 0.6);
-  border-radius: 15px;
-  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.1);
   border: 1px solid rgba(139, 92, 246, 0.2);
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
 }
 
-.timeline-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.2);
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-secondary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover::before {
+  transform: scaleX(1);
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
   border-color: var(--accent-color);
 }
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -2.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1rem;
-  height: 1rem;
-  background: var(--accent-color);
-  border-radius: 50%;
+.experience-card.current {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
 }
 
-.timeline-item .role {
+.experience-card.current::before {
+  transform: scaleX(1);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.company-info h3 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px var(--glow-color);
+}
+
+.company-info .role {
   color: var(--accent-color);
-  font-weight: bold;
-  margin: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
-.timeline-item .date {
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.experience-meta .date {
   color: var(--text-secondary);
   font-size: 0.9rem;
-  margin-bottom: 1rem;
-  font-style: italic;
+  font-weight: 500;
 }
 
-.timeline-item ul {
-  list-style-type: none;
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status.current {
+  background: var(--gradient-secondary);
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.status.contract {
+  background: rgba(103, 126, 234, 0.2);
+  color: #a5b4fc;
+  border: 1px solid rgba(103, 126, 234, 0.4);
+}
+
+.status.completed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.experience-content {
   margin-top: 1rem;
 }
 
-.timeline-item li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  position: relative;
+.experience-content .description {
   color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
-.timeline-item li::before {
-  content: "→";
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.achievements li::before {
+  content: "▶";
   position: absolute;
   left: 0;
   color: var(--accent-color);
+  font-size: 0.8rem;
+  top: 0.1rem;
+}
+
+.achievements li:hover {
+  color: var(--text-color);
+  transform: translateX(5px);
+}
+
+/* Responsive Design for Experience */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-meta {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .experience-card {
+    padding: 1.5rem;
+  }
 }
 
 /* Education Cards */
@@ -666,10 +771,11 @@ h6 {
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
   position: relative;
   overflow: hidden;
+  will-change: transform, box-shadow;
 }
 
 .skill-tag::before {
