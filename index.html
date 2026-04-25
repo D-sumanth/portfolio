@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-QGKF3EG9EB"
@@ -12,508 +11,447 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-QGKF3EG9EB");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sumanth Devarapalli - Software Developer &amp; Data Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sumanth Devarapalli, software developer and data engineer building reliable products, data platforms, and digital experiences."
+    />
+    <title>Sumanth Devarapalli | Software Developer & Data Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero-shell" id="top">
       <nav class="navbar">
         <div class="nav-wrapper">
-          <a href="#" class="brand">SD</a>
-          <ul class="nav-links">
+          <a href="#top" class="brand">SD</a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <div class="hero-content">
-        <h1>SUMANTH DEVARAPALLI</h1>
-        <p class="tagline">Software Developer | Data Engineer | Innovator</p>
-        <div class="cta-buttons">
-          <a href="resume.pdf" class="btn primary" download>View Resume</a>
-          <a href="#projects" class="btn secondary">Explore My Work</a>
+
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Software Developer | Data Engineer | Product Builder</p>
+          <h1>Building calm, reliable digital experiences with strong data foundations.</h1>
+          <p class="hero-text">
+            I design and deliver full-stack applications, data workflows, and
+            user-focused solutions that make complex work feel simple for the
+            people using them.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
+          </div>
+          <div class="hero-metrics">
+            <article>
+              <strong>4+</strong>
+              <span>Years across software, data, and delivery</span>
+            </article>
+            <article>
+              <strong>Healthcare</strong>
+              <span>Building systems clinicians can trust</span>
+            </article>
+            <article>
+              <strong>Full Stack</strong>
+              <span>From APIs and SQL to polished interfaces</span>
+            </article>
+          </div>
         </div>
-      </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="images/neil.jpg" alt="Portrait of Sumanth Devarapalli" />
+            </div>
+            <div class="profile-details">
+              <p class="profile-label">Currently</p>
+              <h2>Systems Developer at The Royal Marsden NHS Foundation Trust</h2>
+              <p>
+                Working on clinical data visibility, legacy system access, and
+                dependable digital delivery for healthcare teams.
+              </p>
+            </div>
+            <div class="profile-tags">
+              <span>.NET</span>
+              <span>SQL</span>
+              <span>Node.js</span>
+              <span>React</span>
+              <span>Power BI</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <div class="profile-section">
-          <div class="profile-image">
-            <img src="images/neil.jpg" alt="Sumanth Devarapalli" />
-            <div class="profile-overlay">
-              <div class="profile-badge">
-                <i class="fas fa-code"></i>
-                <span>Developer</span>
-              </div>
-            </div>
-          </div>
+    <main>
+      <section id="about" class="section">
+        <div class="section-heading reveal">
+          <p class="section-kicker">About</p>
+          <h2>A developer who likes clean systems, thoughtful interfaces, and useful outcomes.</h2>
         </div>
-        
-        <div class="about-text">
-          <div class="about-intro">
-            <h3>Hello, I'm Neil Sumanth</h3>
-            <p class="intro-text">
-                A dedicated software developer and data scientist with a Master's in Data Science and Analytics from the University of Leeds.
-              </p>
-              </div>
-              
-              <div class="about-description">
-                <p>
-                  With a strong foundation in full-stack development, database management, and data analysis, I design and deliver solutions that improve efficiency, data accessibility, and user experience. My professional journey spans projects in healthcare, recruitment, and technology, where I have contributed across the entire software development lifecycle.
-                </p>
-                <p>
-                  From creating secure data-driven applications and building scalable referral-based recruitment platforms to designing interactive dashboards and automating workflows, I bring a balance of technical expertise and user-centered design. My work often involves integrating APIs, structuring complex datasets, and ensuring data quality and governance while collaborating closely with cross-functional teams.
-                </p>
-                <p>
-                  I am proficient in modern tools and technologies such as C#, .NET, SQL, Node.js, Python, ReactJS, AWS, Qlik Sense, and Power BI. In addition, I have strong skills in technical documentation, Agile methodology, and stakeholder communication, ensuring projects are both technically robust and aligned with user needs.
-                </p>
-                <p>
-                  I am passionate about solving real-world problems, continuously learning, and driving initiatives that blend technology, collaboration, and creativity to deliver meaningful impact.
-                </p>
-              </div>
-              
-          
-          <div class="quote-section">
-            <div class="quote-container">
-              <div class="quote-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <blockquote class="cooking-quote">
-                When I'm not coding, I'm Cooking.
-              </blockquote>
-              <div class="quote-decoration"></div>
+
+        <div class="about-grid">
+          <article class="about-panel reveal">
+            <p>
+              I am Sumanth Devarapalli, a software developer and data
+              professional with a Master's in Data Science and Analytics from
+              the University of Leeds. My work sits at the intersection of
+              application development, analytics, and operational improvement.
+            </p>
+            <p>
+              Across healthcare, recruitment, and technology projects, I have
+              built products that improve visibility, reduce friction, and help
+              teams work with confidence. I enjoy turning complicated processes
+              into dependable digital experiences.
+            </p>
+          </article>
+
+          <aside class="value-panel reveal">
+            <h3>What I bring</h3>
+            <ul class="value-list">
+              <li>Full-stack delivery with a strong backend and data mindset</li>
+              <li>Clear communication with stakeholders and cross-functional teams</li>
+              <li>Experience across clinical systems, dashboards, APIs, and automation</li>
+              <li>Attention to reliability, usability, and practical business impact</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-alt">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Experience</p>
+          <h2>Recent roles and the kind of work I have been trusted to deliver.</h2>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card reveal featured-card">
+            <div class="card-topline">
+              <span class="company">The Royal Marsden Hospital - NHS</span>
+              <span class="date">May 2025 - Present</span>
             </div>
-          </div>
-          
-          <div class="social-links">
-            <a href="mailto:sumanthdev03@gmail.com" class="social-link"
-              ><i class="fas fa-envelope"></i> Email</a
-            >
+            <h3>Systems Developer</h3>
+            <p>
+              Supporting the hospital's migration to Epic by developing and
+              maintaining the Legacy Clinical Viewer so clinicians can continue
+              accessing essential patient information from legacy systems.
+            </p>
+            <ul>
+              <li>Designing and delivering clinical datasets including notes, therapies, diagnoses, and lab data</li>
+              <li>Improving how patient records, referrals, and clinical history are surfaced to users</li>
+              <li>Supporting releases through planning, documentation, testing, and rollout</li>
+              <li>Working closely with integration and QA teams to protect data quality and safety</li>
+            </ul>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="card-topline">
+              <span class="company">Tick9 Ltd.</span>
+              <span class="date">February 2025 - Present</span>
+            </div>
+            <h3>Software Developer (Contract)</h3>
+            <p>
+              Building business applications on the Cyferd platform and shaping
+              cloud-based solutions around real operational needs.
+            </p>
+            <ul>
+              <li>Developing dynamic applications for business workflows</li>
+              <li>Designing scalable digital solutions that improve efficiency</li>
+              <li>Translating client requirements into practical product outcomes</li>
+            </ul>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="card-topline">
+              <span class="company">Westward Care Ltd</span>
+              <span class="date">November 2022 - March 2025</span>
+            </div>
+            <h3>Chef / Application Developer</h3>
+            <p>
+              Led development of the CareConnect platform while also working in
+              a fast-moving operational environment, giving me a strong
+              user-first perspective on product decisions.
+            </p>
+            <ul>
+              <li>Built a Node.js and MySQL platform for care home communication</li>
+              <li>Implemented REST APIs for smoother data integration</li>
+              <li>Optimized database queries to improve response times by 40%</li>
+            </ul>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="card-topline">
+              <span class="company">Earlier Roles</span>
+              <span class="date">2020 - 2025</span>
+            </div>
+            <h3>Full Stack, Analytics, and IoT Delivery</h3>
+            <p>
+              Additional experience across HireSplit, Tata Consultancy Services,
+              and Nokia Solutions and Networks.
+            </p>
+            <ul>
+              <li>Built dashboards, data pipelines, and workflow automation</li>
+              <li>Worked with AWS services and real-time monitoring solutions</li>
+              <li>Delivered software that improved reporting speed and operational efficiency</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Education</p>
+          <h2>Academic grounding that supports both engineering and analytics work.</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <span class="education-year">2022 - 2023</span>
+            <h3>Master's in Data Science & Analytics</h3>
+            <p>University of Leeds</p>
+            <strong>Merit</strong>
+          </article>
+          <article class="education-card reveal">
+            <span class="education-year">2017 - 2021</span>
+            <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
+            <p>B V Raju Institute of Technology</p>
+            <strong>Distinction with Research Scholar Honor</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Skills</p>
+          <h2>Tools and strengths I rely on to move projects from idea to delivery.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Languages</h3>
+            <div class="tag-group">
+              <span>C#</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>C++</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Frameworks & Platforms</h3>
+            <div class="tag-group">
+              <span>.NET</span>
+              <span>ASP.NET Core</span>
+              <span>Node.js</span>
+              <span>React</span>
+              <span>AWS</span>
+              <span>Cyferd</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Data & Delivery</h3>
+            <div class="tag-group">
+              <span>MySQL</span>
+              <span>Power BI</span>
+              <span>Qlik Sense</span>
+              <span>REST APIs</span>
+              <span>GitHub</span>
+              <span>Postman</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Ways of Working</h3>
+            <div class="tag-group">
+              <span>Stakeholder Communication</span>
+              <span>Technical Documentation</span>
+              <span>Agile Delivery</span>
+              <span>Problem Solving</span>
+              <span>Cross-team Collaboration</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Projects</p>
+          <h2>A few examples that show how I build with both technical depth and practical impact.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span>Healthcare Platform</span>
+              <span>Featured</span>
+            </div>
+            <h3>CareConnect</h3>
+            <p>
+              A centralized communication platform for care homes built with
+              Node.js, Express.js, and MySQL to streamline workflows and support
+              GDPR-aware operations.
+            </p>
+            <div class="tag-group">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+              <span>GDPR</span>
+            </div>
             <a
-              href="https://www.linkedin.com/in/neil-sumanth-1306/"
-              class="social-link"
+              href="https://github.com/D-sumanth/careconnect_v3"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i> LinkedIn</a
+              class="text-link"
+              >View Project</a
             >
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span>Simulation</span>
+              <span>Research</span>
+            </div>
+            <h3>Optimized Path Planning</h3>
+            <p>
+              Python-based path optimization work focused on reducing detection
+              risk and improving strategic planning through simulation-led
+              analysis.
+            </p>
+            <div class="tag-group">
+              <span>Python</span>
+              <span>Algorithms</span>
+              <span>Simulation</span>
+            </div>
             <a
               href="https://github.com/D-sumanth"
-              class="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-github"></i> GitHub</a
+              class="text-link"
+              >Explore on GitHub</a
             >
-          </div>
-        </div>
-      </div>
-    </section>
+          </article>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <h2>Professional Experience</h2>
-      <div class="experience-container">
-        <div class="experience-card current">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>The Royal Marsden Hospital - NHS</h3>
-              <p class="role">Systems Developer</p>
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span>Computer Vision</span>
+              <span>AI</span>
             </div>
-            <div class="experience-meta">
-              <span class="date">May 2025 - Present</span>
-              <span class="status current">Current</span>
+            <h3>Tile Crack Detection</h3>
+            <p>
+              Built a defect detection system using deep learning, Raspberry Pi,
+              and LabVIEW to improve quality assurance and manufacturing speed.
+            </p>
+            <div class="tag-group">
+              <span>Deep Learning</span>
+              <span>Raspberry Pi</span>
+              <span>LabVIEW</span>
             </div>
-          </div>
-          <div class="experience-content">
-            <p class="description">Worked as part of the digital transformation programme to support the hospital's migration to Epic. My role focused on developing and maintaining the Legacy Clinical Viewer (LCV), a system that ensures clinicians continue to have access to vital patient information from legacy systems.</p>
-            <ul class="achievements">
-              <li>Designing and delivering new clinical datasets (e.g., patient notes, therapies, diagnoses, laboratory data) for use in LCV</li>
-              <li>Ensuring information such as patient notes, referrals, and clinical records are clearly displayed for clinicians</li>
-              <li>Supporting regular system releases, including planning, documentation, testing, and rollout</li>
-              <li>Collaborating with integration and QA teams to ensure clinical data is accurate, consistent, and safe to use</li>
-              <li>Producing clear documentation and contributing to the ongoing improvement of the LCV platform</li>
-            </ul>
-          </div>
+            <a
+              href="https://github.com/D-sumanth"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+              >Explore on GitHub</a
+            >
+          </article>
         </div>
+      </section>
 
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>Tick9 Ltd.</h3>
-              <p class="role">Software Developer (Contract)</p>
-            </div>
-            <div class="experience-meta">
-              <span class="date">February 2025 - Present</span>
-              <span class="status contract">Contract</span>
-            </div>
-          </div>
-          <div class="experience-content">
-            <ul class="achievements">
-              <li>Develop dynamic applications using the Cyferd platform</li>
-              <li>Design scalable, cloud-based solutions to optimize business processes</li>
-              <li>Collaborate with clients to transform requirements into efficient digital solutions</li>
-            </ul>
-          </div>
-        </div>
+      <section id="contact" class="section contact-section">
+        <div class="contact-panel reveal">
+          <div class="contact-content">
+            <p class="section-kicker">Contact</p>
+            <h2>Open to thoughtful teams, interesting products, and meaningful problems.</h2>
+            <p class="contact-copy">
+              If you are hiring, collaborating, or just want to talk through an
+              idea, I would love to hear from you.
+            </p>
 
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>Westward Care Ltd</h3>
-              <p class="role">Chef / Application Developer</p>
-            </div>
-            <div class="experience-meta">
-              <span class="date">November 2022 - March 2025</span>
-              <span class="status completed">Completed</span>
+            <div class="contact-links">
+              <a href="mailto:sumanthdev03@gmail.com" class="contact-link">
+                <span>Email</span>
+                <strong>sumanthdev03@gmail.com</strong>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/neil-sumanth-1306/"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>LinkedIn</span>
+                <strong>Connect professionally</strong>
+              </a>
+              <a
+                href="https://github.com/D-sumanth"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>GitHub</span>
+                <strong>See more code and repositories</strong>
+              </a>
             </div>
           </div>
-          <div class="experience-content">
-            <ul class="achievements">
-              <li>Led development of CareConnect platform using Node.js and MySQL</li>
-              <li>Implemented RESTful APIs for seamless data integration</li>
-              <li>Optimized database queries resulting in 40% faster response times</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>HireSplit</h3>
-              <p class="role">Full Stack Developer</p>
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Your email" required />
+              </label>
             </div>
-            <div class="experience-meta">
-              <span class="date">May 2024 - April 2025</span>
-              <span class="status completed">Completed</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>Tata Consultancy Services</h3>
-              <p class="role">Software Engineer</p>
-            </div>
-            <div class="experience-meta">
-              <span class="date">July 2021 - July 2022</span>
-              <span class="status completed">Completed</span>
-            </div>
-          </div>
-          <div class="experience-content">
-            <ul class="achievements">
-              <li>Created data pipelines and Power BI dashboards</li>
-              <li>Leveraged AWS services for big data processing</li>
-              <li>Reduced reporting time by 60% through automation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-info">
-              <h3>Nokia Solutions and Networks</h3>
-              <p class="role">IoT Analyst</p>
-            </div>
-            <div class="experience-meta">
-              <span class="date">2020 - 2021</span>
-              <span class="status completed">Completed</span>
-            </div>
-          </div>
-          <div class="experience-content">
-            <ul class="achievements">
-              <li>Developed IIoT solutions for manufacturing</li>
-              <li>Improved operational efficiency by 25%</li>
-              <li>Implemented real-time monitoring systems</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="education-cards">
-        <div class="education-card">
-          <h3>Master's in Data Science & Analytics</h3>
-          <p>University of Leeds</p>
-          <p>2022-2023</p>
-          <p>Merit</p>
-        </div>
-        <div class="education-card">
-          <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
-          <p>B V Raju Institute of Technology</p>
-          <p>2017-2021</p>
-          <p>Dsitinction with Research scholar honor</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3>Programming Languages <span class="skill-count">5</span></h3>
-          <div class="skills-tags">
-            <span class="skill-tag primary">C++</span>
-            <span class="skill-tag primary">Python</span>
-            <span class="skill-tag primary">JavaScript</span>
-            <span class="skill-tag primary">C#</span>
-            <span class="skill-tag primary">SQL</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Frameworks & Tools <span class="skill-count">7</span></h3>
-          <div class="skills-tags">
-            <span class="skill-tag secondary">Node.js</span>
-            <span class="skill-tag secondary">ReactJS</span>
-            <span class="skill-tag secondary">RESTful APIs</span>
-            <span class="skill-tag secondary">.NET/ASP.NET Core</span>
-            <span class="skill-tag secondary">AWS</span>
-            <span class="skill-tag secondary">Git/GitHub</span>
-            <span class="skill-tag secondary">Postman</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Data Visualization <span class="skill-count">4</span></h3>
-          <div class="skills-tags">
-            <span class="skill-tag tertiary">Power BI</span>
-            <span class="skill-tag tertiary">Tableau</span>
-            <span class="skill-tag tertiary">SQL</span>
-            <span class="skill-tag tertiary">Qlik Sense</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Soft Skills <span class="skill-count">7</span></h3>
-          <div class="skills-tags">
-            <span class="skill-tag quaternary">Stakeholder Communication</span>
-            <span class="skill-tag quaternary">Technical Writing</span>
-            <span class="skill-tag quaternary">Documentation & Knowledge Sharing</span>
-            <span class="skill-tag quaternary">Cross-team Collaboration</span>
-            <span class="skill-tag quaternary">Problem Solving</span>
-            <span class="skill-tag quaternary">Team Leadership</span>
-            <span class="skill-tag quaternary">Agile Methodology</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="projects-container">
-        <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-hospital"></i>
-            </div>
-            <div class="project-status">
-              <span class="status-badge completed">Completed</span>
-            </div>
-          </div>
-          <h3>CareConnect - Centralized Care Home Communication System</h3>
-          <p class="project-description">
-            Developed a centralized communication platform for care homes using Node.js, Express.js, and MySQL. Improved operational efficiency, ensured GDPR compliance, and tailored features for streamlined workflows and staff usability.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express.js</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">GDPR</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sumanth-devarapalli/careconnect" class="btn secondary" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View Project
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-route"></i>
-            </div>
-            <div class="project-status">
-              <span class="status-badge completed">Completed</span>
-            </div>
-          </div>
-          <h3>Optimized Path Planning</h3>
-          <p class="project-description">
-            Developed Python-based path optimization algorithms for DSTL, reducing detection risks by 25%. Applied advanced simulations to improve strategic operations and safety in defense applications.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Algorithms</span>
-            <span class="tech-tag">Simulation</span>
-            <span class="tech-tag">DSTL</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sumanth-devarapalli/path-planning" class="btn secondary" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            <div class="project-status">
-              <span class="status-badge completed">Completed</span>
-            </div>
-          </div>
-          <h3>Tile Crack Detection</h3>
-          <p class="project-description">
-            Built an automated tile defect detection system with deep learning, achieving 95% accuracy. Integrated Raspberry Pi and LabVIEW, improving manufacturing efficiency by 30% with enhanced quality assurance.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Deep Learning</span>
-            <span class="tech-tag">Raspberry Pi</span>
-            <span class="tech-tag">LabVIEW</span>
-            <span class="tech-tag">Computer Vision</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sumanth-devarapalli/crack-detection" class="btn secondary" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-shipping-fast"></i>
-            </div>
-            <div class="project-status">
-              <span class="status-badge completed">Completed</span>
-            </div>
-          </div>
-          <h3>Nokia 5G Logistics Optimization</h3>
-          <p class="project-description">
-            Designed IIoT-based logistics solutions for 5G modules, reducing delivery times by 30%. Implemented digital tracking, predictive modeling, and advanced analytics to enhance workflows and operational efficiency.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">IIoT</span>
-            <span class="tech-tag">5G</span>
-            <span class="tech-tag">Analytics</span>
-            <span class="tech-tag">Predictive Modeling</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sumanth-devarapalli/healthcare-analytics" class="btn secondary" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Get In Touch</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-intro">
-            <h3>Let's Work Together</h3>
-            <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-          </div>
-          
-          <div class="contact-methods">
-            <a href="mailto:sumanthdev03@gmail.com" class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <p>sumanthdev03@gmail.com</p>
-              </div>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/neil-sumanth-1306/" class="contact-method" target="_blank" rel="noopener noreferrer">
-              <div class="contact-icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="contact-details">
-                <h4>LinkedIn</h4>
-                <p>Connect with me professionally</p>
-              </div>
-            </a>
-            
-            <a href="https://github.com/D-sumanth" class="contact-method" target="_blank" rel="noopener noreferrer">
-              <div class="contact-icon">
-                <i class="fab fa-github"></i>
-              </div>
-              <div class="contact-details">
-                <h4>GitHub</h4>
-                <p>Check out my code repositories</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        
-        <div class="contact-form-container">
-          <form id="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
-              <label>Name</label>
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Your Email" required />
-              <label>Email</label>
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Subject" required />
-              <label>Subject</label>
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Your Message" required></textarea>
-              <label>Message</label>
-            </div>
-            <button type="submit" class="btn primary">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
-            </button>
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="What is this about?" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea
+                name="message"
+                placeholder="Tell me a little about the opportunity or project"
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="btn primary">Send Message</button>
           </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Sumanth Devarapalli. All rights reserved.</p>
-      <a href="#" class="back-to-top">Back to Top</a>
+    <footer class="site-footer">
+      <p>&copy; 2026 Sumanth Devarapalli</p>
+      <a href="#top" class="text-link">Back to top</a>
     </footer>
 
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <script src="script.js"></script>
   </body>
 </html>

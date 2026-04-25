@@ -1,113 +1,80 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
     });
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const targetId = anchor.getAttribute("href");
+    if (!targetId || targetId === "#") {
+      return;
+    }
+
+    const target = document.querySelector(targetId);
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 });
 
-// Contact form handling
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const mailtoLink = `mailto:sumanthdev03@gmail.com?subject=${encodeURIComponent(formData.get('subject'))}&body=${encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`)}`;
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window && revealElements.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        currentObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px",
+    }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+}
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const subject = formData.get("subject") || "";
+    const message = formData.get("message") || "";
+
+    const mailtoLink = `mailto:sumanthdev03@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
     window.location.href = mailtoLink;
-    alert('Thank you for your message! Your default email client will open to send the email.');
-    this.reset();
-});
-
-// Back to top button functionality
-const backToTop = document.querySelector('.back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 100) {
-        backToTop.style.display = 'block';
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-
-backToTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Add scroll animations with optimized performance
-const sections = document.querySelectorAll('.section');
-const observerOptions = {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "0px"
-};
-
-// Use requestAnimationFrame for smoother animations
-const animateSection = (element) => {
-    requestAnimationFrame(() => {
-        element.style.opacity = 1;
-        element.style.transform = 'translateY(0)';
-    });
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateSection(entry.target);
-            observer.unobserve(entry.target); // Stop observing after animation
-        }
-    });
-}, observerOptions);
-
-sections.forEach(section => {
-    if (!section.classList.contains('skills')) {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        section.style.willChange = 'opacity, transform';
-        observer.observe(section);
-    }
-});
-
-// Animate skill categories
-const skillCategories = document.querySelectorAll('.skill-category');
-const skillCategoryObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, index * 200);
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-skillCategories.forEach(category => {
-    skillCategoryObserver.observe(category);
-});
-
-// Animate skill tags when they come into view with optimized performance
-const skillTags = document.querySelectorAll('.skill-tag');
-const skillTagObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) scale(1)';
-                }, index * 30); // Reduced delay for smoother animation
-            });
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-skillTags.forEach(tag => {
-    tag.style.opacity = '0';
-    tag.style.transform = 'translateY(20px) scale(0.8)';
-    tag.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-    tag.style.willChange = 'opacity, transform';
-    skillTagObserver.observe(tag);
-});
+  });
+}
